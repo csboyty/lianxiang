@@ -45,12 +45,14 @@ $(document).ready(function(){
     $(".menu a[data-page-name='"+pageName+"']").addClass("active");
 
     if(common.checkMobile()){
-        $(".computerVideo").removeAttr("autoplay loop").attr("controls","controls");
+        /*$(".computerVideo").removeAttr("autoplay loop").attr("controls","controls");
 
         if(navigator.userAgent.indexOf('UCBrowser') > -1||navigator.userAgent.indexOf('QQBrowser')>-1) {
             $("video").removeClass("computerVideo").addClass("phoneVideo");
-        }
+        }*/
         $(".hasAnimated.oHidden").removeClass("hasAnimated oHidden");
+        $(".computerVideo,.videoBg").remove();
+        $(".phoneImg").css("display","block");
 
     }
 });
